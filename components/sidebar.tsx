@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { X, Briefcase, BookOpen, House, Users } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -43,14 +44,22 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             transition={{ type: "tween", duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-1/2 bg-gradient-to-br from-blue-700/95 via-blue-600/95 to-blue-800/95 z-[60] shadow-2xl p-6 flex flex-col border-r border-blue-500/20 max-w-xs"
           >
-            {/* Sidebar Header */}
-            <div className="flex items-center justify-between mb-8 border-b border-blue-400/20 pb-4">
-              <span className="font-bold text-lg text-white">
-                PIONEERS FOOTPRINTS
-              </span>
-              <button onClick={onClose} className="text-white hover:bg-blue-500/20 p-2 rounded-lg transition">
-                <X className="w-6 h-6" />
-              </button>
+             {/* Header / Branding */}
+            <div className="p-6 border-b border-white/20 dark:border-blue-100 text-center">
+              <div className="relative w-16 h-16 mx-auto mb-3 rounded-lg overflow-hidden shadow-md border border-white/30 dark:border-blue-300">
+                <Image
+                  src="/assets/logo.jpg"
+                  alt="Pioneers Footprints Logo"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-bold bg-gradient-to-r dark:from-blue-900 via-cyan-400 to-blue-400 bg-clip-text text-transparent" style={{ fontFamily: "Times New Roman" }}>
+  Pioneers Footprints
+</h3>
+              <p className="text-xs text-from-blue-500 via-cyan-400 to-blue-400 mt-1">
+                Preserving Pioneers Legacy
+              </p>
             </div>
 
             {/* Menu Links */}
