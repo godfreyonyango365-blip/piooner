@@ -6,8 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
-  },
+    "lint": "next lint"
+},
+
   "dependencies": {
     "cloudinary": "^2.9.0",
     "firebase": "^12.11.0",
