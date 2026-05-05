@@ -7,6 +7,8 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 interface CloudinaryUploadResponse {
   secure_url: string;
+  public_id: string;
+  error?: string;
   message?: string;
 }
 
@@ -23,41 +25,22 @@ export default function UploadPage() {
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+  const uploadToCloudinary = async (uploadFile: File) => {
+    const formData = new FormData();
+    formData.append("file", uploadFile);
 
-  const uploadToCloudinary = (file: File, resourceType: "raw" | "image") => {
-    return new Promise<CloudinaryUploadResponse>((resolve, reject) => {
-      const formData = new FormData();
-      formData.append("file", file);
-      formData.append("upload_preset", "pioneers_secure");
-
-      const xhr = new XMLHttpRequest();
-
-      xhr.open(
-        "POST",
-        `https://api.cloudinary.com/v1_1/${cloudName}/${resourceType}/upload`
-      );
-
-      xhr.upload.onprogress = (event) => {
-        if (event.lengthComputable) {
-          const percent = Math.round((event.loaded / event.total) * 100);
-          setProgress(percent);
-        }
-      };
-
-      xhr.onload = () => {
-        const response = JSON.parse(xhr.responseText) as CloudinaryUploadResponse;
-        if (xhr.status >= 200 && xhr.status < 300) {
-          resolve(response);
-        } else {
-          reject(response);
-        }
-      };
-
-      xhr.onerror = () => reject("Upload failed");
-
-      xhr.send(formData);
+    const response = await fetch("/api/upload", {
+      method: "POST",
+      body: formData,
     });
+
+    const data = (await response.json()) as CloudinaryUploadResponse;
+
+    if (!response.ok) {
+      throw new Error(data.error || data.message || "Upload failed");
+    }
+
+    return data;
   };
 
   const handleUpload = async () => {
@@ -75,20 +58,26 @@ export default function UploadPage() {
       setLoading(true);
       setProgress(0);
 
-      const fileRes = await uploadToCloudinary(file, "raw");
+      const fileRes = await uploadToCloudinary(file);
+      setProgress(50);
 
       let thumbUrl = "";
+      let thumbPublicId = "";
 
       if (thumbnail) {
-        const thumbRes = await uploadToCloudinary(thumbnail, "image");
+        const thumbRes = await uploadToCloudinary(thumbnail);
         thumbUrl = thumbRes.secure_url;
+        thumbPublicId = thumbRes.public_id;
       }
+      setProgress(100);
 
       await addDoc(collection(db, "publications"), {
         name,
         description,
         fileUrl: fileRes.secure_url,
+        filePublicId: fileRes.public_id,
         thumbnailUrl: thumbUrl,
+        thumbnailPublicId: thumbPublicId,
         createdAt: serverTimestamp(),
       });
 
