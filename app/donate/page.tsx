@@ -5,8 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
 
 export default function DonatePage() {
-  const paybillNumber = "522522";
-  const accountNumber = "PIONEERS";
+  const paybillNumber = "400200";
+  const accountNumber = "01102953561001";
   const mpesaNumber = "+254742767609";
 
   const whatsappMessage = encodeURIComponent(
