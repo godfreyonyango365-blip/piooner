@@ -11,7 +11,7 @@ const services = [
   {
     title: "King James Version (KJV) Bibles",
     description: "The classic, authorized version of the Holy Scriptures. We provide high-quality study editions, large print, and reference Bibles for deep spiritual study.",
-    image: "/assets/kjv.png",
+    image: "/assets/kjv.jpeg",
     icon: <Book className="w-5 h-5" />,
     tags: ["Study Edition", "Hardcover", "Reference"],
     orderLink: "https://www.nurushop.co.ke"
@@ -19,7 +19,7 @@ const services = [
   {
     title: "Luo & Kiswahili Translations",
     description: "Bringing the Word of God closer to home. We offer accurate and readable translations in Dholuo and Kiswahili, perfect for local congregations and personal devotion.",
-    image: "/assets/luo.png",
+    image: "/assets/luo.jpeg",
     icon: <Languages className="w-5 h-5" />,
     tags: ["Regional", "Clear Text", "Standard"],
     orderLink: "https://www.nurushop.co.ke"
@@ -35,7 +35,7 @@ const services = [
   {
     title: "Ellen G. White Writings",
     description: "Explore the profound insights of the Spirit of Prophecy. From 'The Desire of Ages' to 'The Great Controversy,' we stock the complete library of E.G. White's inspired works.",
-    image: "/assets/egw.png",
+    image: "/assets/egw.jpeg",
     icon: <Star className="w-5 h-5" />,
     tags: ["Prophecy", "Health", "Education"],
     orderLink: "https://www.nurushop.co.ke"

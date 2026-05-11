@@ -24,7 +24,7 @@ const teamMembers = [
     role: "Media Manager",
     email: "phynianceochieng@gmail.com",
     bio: "Developing and maintaining our digital platforms and services through Media Services.",
-    photo: "/assets/phyniance.jpg",
+    photo: "/assets/phy.jpeg",
   },
 ];
 
