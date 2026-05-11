@@ -12,7 +12,7 @@ const healthServices = [
   {
     title: "Natural Remedies",
     description: "Explore effective and safe herbal remedies for everyday wellness. Our solutions are natural, time-tested, and crafted to support your health holistically.",
-    image: "/assets/remedies.png",
+    image: "/assets/remedies.jpeg",
     tags: ["Herbal", "Wellness", "Natural"],
     orderLink: "https://www.nurushop.co.ke"
   },
@@ -27,7 +27,7 @@ const healthServices = [
   {
     title: "Medical Missionary Work",
     description: "Serving communities with medical support, wellness checkups, and health outreach programs, combining faith and service for holistic care.",
-    image: "/assets/medical.png",
+    image: "/assets/medical.jpeg",
     icon: <Cross className="w-5 h-5" />,
     tags: ["Outreach", "Care", "Community"],
     contact: true
@@ -35,7 +35,7 @@ const healthServices = [
   {
     title: "Wellness Programs",
     description: "Structured wellness programs promoting fitness, stress management, and healthy living practices, designed for all ages and lifestyles.",
-    image:  "/assets/wellness.png",
+    image:  "/assets/wellness.jpeg",
     icon: <PlusSquareIcon className="w-5 h-5" />,
     tags: ["Fitness", "Mindfulness", "Lifestyle"],
    contact: true
