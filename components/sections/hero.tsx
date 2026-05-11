@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const FULL_TEXT =
-  " Publishing Truth. Preserving Heritage. Advancing Mission.";
+  "Building knowledge, preserving truth, and advancing digital ministry through publications and technology.";
 
 const PARTICLES = [
   { left: "8%", top: "18%", duration: 3.2 },
@@ -116,10 +116,10 @@ export default function Hero() {
           </motion.h1>
 
           <h2 className="mt-4 text-xl text-blue-200 md:text-2xl">
-            Advent Pioneer Tech 
+            Publications & Digital Ministry
           </h2>
 
-          <div className="mt-5 min-h-[1.5em] text-lg text-cyan-500 md:text-xl">
+          <div className="mt-6 min-h-[1.5em] text-lg text-blue-100 md:text-xl">
             {typingText}
             <span className="animate-pulse">|</span>
           </div>
@@ -134,12 +134,17 @@ export default function Hero() {
 
             <Link
               href="/publications"
-              className="rounded-xl border-2 border-purple-400 px-8 py-4 text-purple-200 transition hover:bg-purple-400/20"
+              className="rounded-xl border-2 border-blue-300 px-8 py-4 text-white transition hover:bg-white/10"
             >
               View Resources
             </Link>
 
-        
+            <Link
+              href="/donate"
+              className="rounded-xl border-2 border-purple-400 px-8 py-4 text-purple-200 transition hover:bg-purple-400/20"
+            >
+              Support Mission
+            </Link>
           </div>
         </div>
 
@@ -158,7 +163,7 @@ export default function Hero() {
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 5 }}
+        transition={{ repeat: Infinity, duration: 2 }}
       >
         <div className="flex h-10 w-6 justify-center rounded-full border-2 border-blue-400 pt-2">
           <div className="h-3 w-1 rounded-full bg-blue-400" />

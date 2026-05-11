@@ -45,7 +45,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             className="fixed top-0 left-0 h-full w-1/2 bg-gradient-to-br from-blue-700/95 via-blue-600/95 to-blue-800/95 z-[60] shadow-2xl p-6 flex flex-col border-r border-blue-500/20 max-w-xs"
           >
              {/* Header / Branding */}
-            <div className="p-6 border-b border-white/20 dark:border-blue-100 text-center">
+            <div className="p-6 border-b border-white/20 dark:border-blue-300 text-center">
               <div className="relative w-16 h-16 mx-auto mb-3 rounded-lg overflow-hidden shadow-md border border-white/30 dark:border-blue-300">
                 <Image
                   src="/assets/logo.jpg"
