@@ -30,7 +30,7 @@ const services = [
     image: "/assets/song.png",
     icon: <ScrollText className="w-5 h-5" />,
     tags: ["Hymnals", "Lyrics", "Sheet Music"],
-    orderLink: "https://www.nurushop.co.ke"
+    orderLink: "https://www.nurushop.co.ke/products/6TQoQYO1abnlvwRoABGm"
   },
   {
     title: "Ellen G. White Writings",
@@ -38,7 +38,7 @@ const services = [
     image: "/assets/egw.jpeg",
     icon: <Star className="w-5 h-5" />,
     tags: ["Prophecy", "Health", "Education"],
-    orderLink: "https://www.nurushop.co.ke"
+    orderLink: "https://www.nurushop.co.ke/shop?category=ellen-white-writings"
   },
   {
     title: "Pioneers Library Archives",
@@ -46,7 +46,7 @@ const services = [
     image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=800&auto=format&fit=crop",
     icon: <Archive className="w-5 h-5" />,
     tags: ["Historical", "Rare Books", "Gospel Order"],
-    orderLink: "https://www.nurushop.co.ke"
+    orderLink: "https://www.nurushop.co.ke/shop?category=pioneers-writings"
   },
   {
     title: "Educational & Children's Literature",
