@@ -5,14 +5,12 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { X, Briefcase, BookOpen, House, Users } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HandCoinsIcon } from "lucide-react";
 
 const sidebarItems = [
   { name: "Home", href: "/", icon: House },
   { name: "Services", href: "/services", icon: Briefcase },
   { name: "Publications", href: "/publications", icon: BookOpen },
   { name: "Team", href: "/team", icon: Users },
-  { name: "Support", href: "/donate", icon: HandCoinsIcon  },
 ];
 
 interface SidebarProps {

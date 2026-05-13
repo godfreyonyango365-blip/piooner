@@ -5,22 +5,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const FULL_TEXT =
-  "Building knowledge, preserving truth, and advancing digital ministry through publications and technology.";
+  "Publications, Medical & Digital Ministry.";
 
 const PARTICLES = [
   { left: "8%", top: "18%", duration: 3.2 },
-  { left: "18%", top: "72%", duration: 4.1 },
-  { left: "27%", top: "36%", duration: 3.7 },
-  { left: "35%", top: "84%", duration: 4.6 },
-  { left: "43%", top: "22%", duration: 3.4 },
-  { left: "52%", top: "64%", duration: 4.8 },
-  { left: "61%", top: "12%", duration: 3.9 },
-  { left: "69%", top: "48%", duration: 4.4 },
-  { left: "76%", top: "78%", duration: 3.5 },
-  { left: "84%", top: "28%", duration: 4.9 },
-  { left: "91%", top: "58%", duration: 3.8 },
-  { left: "12%", top: "46%", duration: 4.3 },
-  { left: "48%", top: "90%", duration: 3.6 },
   { left: "94%", top: "16%", duration: 4.2 },
 ];
 
@@ -77,16 +65,7 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <video
-          src="/assets/bygo.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="max-h-full max-w-full object-contain opacity-80"
-        />
-      </div>
+
 
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950/80 via-blue-900/70 to-black/80" />
 
@@ -115,9 +94,7 @@ export default function Hero() {
             </span>
           </motion.h1>
 
-          <h2 className="mt-4 text-xl text-blue-200 md:text-2xl">
-            Publications & Digital Ministry
-          </h2>
+        
 
           <div className="mt-6 min-h-[1.5em] text-lg text-blue-100 md:text-xl">
             {typingText}
@@ -140,10 +117,10 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="/donate"
+              href="/team"
               className="rounded-xl border-2 border-purple-400 px-8 py-4 text-purple-200 transition hover:bg-purple-400/20"
             >
-              Support Mission
+              Our Team 
             </Link>
           </div>
         </div>

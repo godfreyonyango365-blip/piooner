@@ -6,14 +6,12 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, Briefcase, BookOpen, House, Users } from "lucide-react";
 import Sidebar from "./sidebar";
-import { HandCoinsIcon  } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "/", icon: House },
   { name: "Services", href: "/services", icon: Briefcase },
   { name: "Publications", href: "/publications", icon: BookOpen },
   { name: "Team", href: "/team", icon: Users },
-  { name: "Support", href: "/donate", icon: HandCoinsIcon  }
 
 ];
 
