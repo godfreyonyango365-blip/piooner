@@ -12,9 +12,6 @@ const firebaseConfig: {
   appId: string;
 
 
-
-
-
   
 } = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
@@ -26,7 +23,8 @@ const firebaseConfig: {
 };
 
 // Initialize Firebase only once
-const app: FirebaseApp = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
+const app: FirebaseApp =
+  !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
 
 // Auth & Firestore exports
 export const auth: Auth = getAuth(app);

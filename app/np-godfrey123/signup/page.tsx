@@ -1,5 +1,5 @@
 "use client";
-
+export const dynamic = "force-dynamic";
 import AdminForm from "@/components/admin/AdminForm";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/lib/firebase";
