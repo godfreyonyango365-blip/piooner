@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { X, Briefcase, BookOpen, House, Users } from "lucide-react";
+import { X, Briefcase, BookOpen, House, Users } from "@/components/icon";
 import { motion, AnimatePresence } from "framer-motion";
 
 const sidebarItems = [

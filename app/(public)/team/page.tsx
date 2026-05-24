@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { motion } from "framer-motion";
-import { Mail, Briefcase } from "lucide-react";
+import { Mail, Briefcase } from "@/components/icon";
 
 const teamMembers = [
   {

@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import React, { useState } from "react";
-import { MessageCircle, X } from "lucide-react";
+import { MessageCircle, X } from "@/components/icon";
 
 const WHATSAPP_NUMBER = "254742767609";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello,%20I%20am%20inquiring%20about a specific media service.`;
